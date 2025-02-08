@@ -3,45 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Will You Be My Girlfriend?</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-        }
-        .container {
             text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
         }
-        button {
+        .heart {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(45deg);
+            animation: pulse 1.5s infinite;
+        }
+        .heart:before,
+        .heart:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            top: -50px;
+        }
+        .heart:before {
+            left: 0;
+        }
+        .heart:after {
+            left: 50px;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1) rotate(45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(45deg);
+            }
+            100% {
+                transform: scale(1) rotate(45deg);
+            }
+        }
+        .message {
             margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background-color: #4CAF50;
-            color: white;
-            transition: background-color 0.3s;
+            font-size: 1.2em;
+            color: #333;
         }
-        button:hover {
-            background-color: #45a049;
+        .gif-container {
+            margin-top: 20px;
+        }
+        .gif-container img {
+            width: 200px;
+            height: auto;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome,[ sneha]!</h1>
-        <p>Click the button below to continue.</p>
-        <button onclick="location.href='proposal.html'">Continue</button>
+    <h1>Will You Be My Girlfriend?</h1>
+    <div class="heart"></div>
+    <div class="message">
+        <p>Sneha, again today I know that you don't like this week, neither do I. But today is Propose Day, so I just want to say, Sneha, I fell in love with you so hard. I want to spend today, tomorrow, and my entire life with you. I don't need a special day to say I love you, but I love you. Will you be my girlfriend?</p>
+    </div>
+    <div class="gif-container">
+        <img src="https://media.tenor.com/images/8a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a/tenor.gif" alt="Teddy Bear Holding Heart">
     </div>
 </body>
 </html>
